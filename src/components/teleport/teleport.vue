@@ -7,7 +7,7 @@
 
 		name: 'teleport',
 
-		props: { location: {}, disabled: {} },
+		props: { to: {}, disabled: {} },
 
 		data(){
 			return {
@@ -18,7 +18,7 @@
 
 		computed: {
 			locationName(){
-				return this.location || 'default'
+				return this.to || 'default'
 			}
 		},
 		watch: {

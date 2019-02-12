@@ -1,29 +1,32 @@
 # vue-teleport
 
-## Project setup
+Vue components to transfer sloted DOM to another location. Usefull when managing `z-index`, `overflow`, repositioning on different resolutions etc...
+
+### Usage
+
 ```
-npm install
+$ npm install @desislavsd/vue-teleport
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+```javascript
+import { vTeleport, vTeleportLocation } from '@desislavsd/vue-teleport'
 
-### Compiles and minifies for production
-```
-npm run build
-```
+export default {
+  components: { vTeleport, vTeleportLocation }
+}
 
-### Run your tests
-```
-npm run test
-```
+/* or */
 
-### Lints and fixes files
-```
-npm run lint
-```
+import VueTeleport from '@desislavsd/vue-teleport'
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Vue.use(VueTeleport) // registers vTeleport, vTeleportLocation globally
+```
+```html
+<!-- props are optional -->
+<v-teleport to="myLocation" :disabled="false">
+  Hello world! <!-- only one root element allowed -->
+</v-teleport>
+
+<!-- props are optional -->
+<v-teleport-location name="myLocation" :tag="p" />
+```

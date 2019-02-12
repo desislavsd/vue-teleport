@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <v-teleport>
       <img alt="Vue logo" src="./assets/logo.png">
+    <v-teleport>
+      hello world
     </v-teleport>
 
     <v-teleport-location class="some" tag="article"/>
