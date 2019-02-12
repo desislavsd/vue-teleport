@@ -1,10 +1,15 @@
 {
-  "name": "vue-teleport",
+  "name": "@desislavsd/vue-teleport",
+  "description": "Vue components to transfer sloted DOM to another location.",
+  "main": "./dist/vue-teleport.common.js",
+  "browser": "./dist/vue-teleport.umd.min.js",
+  "files": ["dist/*", "src/*", "*.json", "*.js"],
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-lib": "vue-cli-service build --target lib --name vue-teleport './src/components/teleport/index.js'",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
