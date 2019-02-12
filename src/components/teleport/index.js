@@ -1,14 +1,14 @@
-import Teleport from './teleport.component'
-import TeleportLocation from './teleport-location.component'
+import vTeleport from './teleport'
+import vTeleportLocation from './teleport-location'
 
 let plugin = {
 	install( Vue ){
-		Vue.component('vTeleport', Teleport);
-		Vue.component('vTeleportLocation', TeleportLocation);
+		Vue.component('vTeleport', vTeleport);
+		Vue.component('vTeleportLocation', vTeleportLocation);
 	},
 }
 
-export { Teleport, TeleportLocation }
+export { vTeleport, vTeleportLocation }
 
 export default plugin;
 

@@ -17,7 +17,7 @@
 		},
 
 		computed: {
-			locationName(val, old){
+			locationName(){
 				return this.location || 'default'
 			}
 		},
@@ -26,7 +26,7 @@
 				this.lastLocationName = old;
 			}
 		},
-		render(h){
+		render(){
 			
 			let { locations, locationName, lastLocationName, _uid } = this,
 					location = locations[locationName] || this.$set(locations, locationName, Object.create(null)),

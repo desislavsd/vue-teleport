@@ -1,14 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <v-teleport>
+      <img alt="Vue logo" src="./assets/logo.png">
+    </v-teleport>
+
+    <v-teleport-location class="some" tag="article"/>
   </div>
 </template>
 
 <script>
 
+import { vTeleport, vTeleportLocation } from './components/teleport'
 export default {
   name: 'app',
   components: {
+    vTeleport,
+    vTeleportLocation,
   }
 }
 </script>

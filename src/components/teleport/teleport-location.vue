@@ -7,7 +7,7 @@
 
 		name: 'teleportLocation',
 
-		props: { name: { default: 'default' } },
+		props: { name: { default: 'default' }, tag: { default: 'div'} },
 
 		data(){
 
@@ -16,7 +16,7 @@
 		
 		render(h){
 
-			return this.children.length ? h('div', this.children) : null;
+			return this.children.length ? h(this.tag, this.children) : null;
 		},
 
 		computed: {
